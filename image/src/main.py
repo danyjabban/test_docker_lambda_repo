@@ -9,8 +9,8 @@ def lambda_handler(event, context):
     sqs = boto3.client("sqs")
 
     sqs.send_message(
-        Queue_url = "https://sqs.us-east-1.amazonaws.com/116497644226/MyQueue1",
-        message_body = json.dumps(d)
+        QueueUrl = "https://sqs.us-east-1.amazonaws.com/116497644226/MyQueue1",
+        MessageBody = json.dumps(d)
     )
 
     
